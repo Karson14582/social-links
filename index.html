@@ -3,22 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Social Media</title>
+  <title>Karson's Socials</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0e6f8e4.js" crossorigin="anonymous"></script>
   <style>
+    /* Galaxy animated gradient background */
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
-      color: white;
       font-family: 'Rubik', sans-serif;
+      background: linear-gradient(-45deg, #8e2de2, #4a00e0, #1f1c2c, #000000);
+      background-size: 400% 400%;
+      animation: galaxyGradient 15s ease infinite;
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+    }
+
+    @keyframes galaxyGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
@@ -35,9 +44,9 @@
     }
 
     .social-link {
-      background-color: #111;
+      background-color: rgba(255, 255, 255, 0.05);
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       color: white;
       font-size: 1.2em;
@@ -46,10 +55,11 @@
       justify-content: center;
       gap: 10px;
       transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
     }
 
     .social-link:hover {
-      background-color: #1e1e1e;
+      background-color: rgba(255, 255, 255, 0.1);
       transform: scale(1.05);
     }
 
@@ -74,7 +84,7 @@
   </style>
 </head>
 <body>
-  <h1>Connect With Me</h1>
+  <h1>My Socials</h1>
 
   <div class="social-links">
     <a class="social-link" href="https://www.snapchat.com/add/karson1458" target="_blank">
