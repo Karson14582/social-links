@@ -1,31 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>My Social Media Links</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f0f0f0;
-    padding: 50px;
-  }
-  a {
-    display: block;
-    margin: 15px;
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #ff007f;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Social Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6f8e4.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: white;
+      font-family: 'Rubik', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5em;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .social-link {
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: #1e1e1e;
+      transform: scale(1.05);
+    }
+
+    i {
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .social-link {
+        font-size: 1em;
+        padding: 12px;
+      }
+
+      i {
+        font-size: 1.2em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Find Me Online</h1>
-  <a href="https://www.snapchat.com/add/karson1458" target="_blank">Snapchat</a>
-  <a href="https://www.tiktok.com/@karson.sosilly" target="_blank">TikTok</a>
-  <a href="https://www.instagram.com/karsonsosilly" target="_blank">Instagram</a>
+  <h1>Connect With Me</h1>
+
+  <div class="social-links">
+    <a class="social-link" href="https://www.snapchat.com/add/karson1458" target="_blank">
+      <i class="fab fa-snapchat-ghost"></i> Snapchat
+    </a>
+    <a class="social-link" href="https://www.tiktok.com/@karson.sosilly" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a class="social-link" href="https://www.instagram.com/karsonsosilly" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a class="social-link" href="https://discord.com/users/1191329049239363635" target="_blank">
+      <i class="fab fa-discord"></i> Discord
+    </a>
+  </div>
 </body>
 </html>
