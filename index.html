@@ -36,20 +36,24 @@
       border-radius: 10px;
       color: white;
       font-weight: bold;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .social-links a:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     }
 
     .snapchat {
       background-color: #fffc00;
-      color: #000;
+      color: black;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px #fffc00aa;
     }
 
     .instagram {
       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      color: white;
     }
 
     .tiktok {
@@ -59,6 +63,7 @@
 
     .discord {
       background-color: #7289da;
+      color: white;
     }
 
     @media (max-width: 600px) {
@@ -74,11 +79,10 @@
   <div class="social-links">
     <a class="snapchat" href="https://www.snapchat.com/add/karson1458" target="_blank">Snapchat</a>
     <a class="instagram" href="https://www.instagram.com/karsonsosilly" target="_blank">Instagram</a>
-    <a class="tiktok" href="https://www.tiktok.com/karson.sosilly" target="_blank">TikTok</a>
+    <a class="tiktok" href="https://www.tiktok.com/@karson.sosilly" target="_blank">TikTok</a>
     <a class="discord" href="https://discord.com/users/1191329049239363635" target="_blank">Discord</a>
   </div>
 
-  <!-- 👇 PWA service worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js')
