@@ -2,103 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karson's Socials</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6f8e4.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4a00e0">
+  <link rel="manifest" href="manifest.json">
+  <title>Karson's Social Links</title>
   <style>
-    /* Galaxy animated gradient background */
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Rubik', sans-serif;
-      background: linear-gradient(-45deg, #8e2de2, #4a00e0, #1f1c2c, #000000);
-      background-size: 400% 400%;
-      animation: galaxyGradient 15s ease infinite;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       min-height: 100vh;
-      text-align: center;
-    }
-
-    @keyframes galaxyGradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     h1 {
-      margin-bottom: 30px;
-      font-size: 2.5em;
+      margin-top: 1rem;
     }
 
     .social-links {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      width: 90%;
-      max-width: 400px;
+      gap: 1rem;
+      margin-top: 2rem;
     }
 
-    .social-link {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 15px;
-      border-radius: 12px;
+    .social-links a {
       text-decoration: none;
+      padding: 1rem;
+      border-radius: 10px;
       color: white;
-      font-size: 1.2em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(6px);
+      font-weight: bold;
+      transition: transform 0.2s;
     }
 
-    .social-link:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+    .social-links a:hover {
       transform: scale(1.05);
     }
 
-    i {
-      font-size: 1.5em;
+    .snapchat {
+      background-color: #fffc00;
+      color: #000;
     }
 
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 2em;
-      }
+    .instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
 
-      .social-link {
-        font-size: 1em;
-        padding: 12px;
-      }
+    .tiktok {
+      background-color: #000000;
+      color: #69C9D0;
+    }
 
-      i {
-        font-size: 1.2em;
+    .discord {
+      background-color: #7289da;
+    }
+
+    @media (max-width: 600px) {
+      .social-links {
+        width: 90%;
+        margin: auto;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Connect With Me</h1>
-
+  <h1>Connect with Karson</h1>
   <div class="social-links">
-    <a class="social-link" href="https://www.snapchat.com/add/karson1458" target="_blank">
-      <i class="fab fa-snapchat-ghost"></i> Snapchat
-    </a>
-    <a class="social-link" href="https://www.tiktok.com/@karson.sosilly" target="_blank">
-      <i class="fab fa-tiktok"></i> TikTok
-    </a>
-    <a class="social-link" href="https://www.instagram.com/karsonsosilly" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a class="social-link" href="https://discord.com/users/1191329049239363635" target="_blank">
-      <i class="fab fa-discord"></i> Discord
-    </a>
+    <a class="snapchat" href="https://www.snapchat.com/add/karson1458" target="_blank">Snapchat</a>
+    <a class="instagram" href="https://www.instagram.com/karsonsosilly" target="_blank">Instagram</a>
+    <a class="tiktok" href="https://www.tiktok.com/karson.sosilly" target="_blank">TikTok</a>
+    <a class="discord" href="https://discord.com/users/1191329049239363635" target="_blank">Discord</a>
   </div>
+
+  <!-- 👇 PWA service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(() => console.log('✅ Service Worker registered!'))
+        .catch(err => console.error('❌ Service Worker registration failed:', err));
+    }
+  </script>
 </body>
 </html>
