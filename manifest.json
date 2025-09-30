@@ -1,11 +1,11 @@
 {
-  "name": "Karson's Social Links",
-  "short_name": "KarsonLinks",
-  "start_url": "./index.html",
+  "name": "KarsonLinks",
+  "short_name": "Karson",
+  "id": "/social-links/index.html",
+  "start_url": "/social-links/index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#4a00e0",
-  "description": "Connect with Karson on all platforms",
   "icons": [
     {
       "src": "icon-192.png",
@@ -15,6 +15,19 @@
     {
       "src": "icon-512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "640x1136",
       "type": "image/png"
     }
   ]
